@@ -1,7 +1,7 @@
 import './main.scss'
-import React, { useEffect } from 'react'
+import React, { useEffect, useCallback } from 'react'
 import { AppSDK } from 'tb-apps-sdk'
-import { hostAPI } from 'tb-apps-sdk/api/internal'
+import { hostAPI } from 'tb-apps-sdk/api/plugin'
 import { render } from 'react-dom'
 
 const webApp = AppSDK.fork(hostAPI)
@@ -13,15 +13,33 @@ const Root: React.FC = () => {
       message: 'Hello Chang',
       description: 'From 3rd-Party Plugin'
     })
+
+    let timeout = 1000
+    let timer: number
+    const nextTick = () => {
+      timer = setTimeout(() => {
+        webApp.refresh()
+        timeout *= 2
+        nextTick()
+      }, timeout)
+    }
+    nextTick()
+
+    return () => clearInterval(timer)
   })
+
+  const handleClick = useCallback(() => {
+    webApp.close()
+  }, [])
 
   return (
     <>
-      <header title={location.href}>{location.href}</header>
+      <header>Task Detail</header>
       <div>
-        <p>.</p>
         <p>{location.href}</p>
-        <p>.</p>
+        <p>
+          [<a onClick={handleClick}>close</a>]
+        </p>
       </div>
     </>
   )
