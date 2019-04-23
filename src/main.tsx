@@ -17,8 +17,12 @@ const Root: React.FC = () => {
 
   return (
     <>
-      <header>{location.href}</header>
-      <div>^^</div>
+      <header title={location.href}>{location.href}</header>
+      <div>
+        <p>.</p>
+        <p>{location.href}</p>
+        <p>.</p>
+      </div>
     </>
   )
 }
