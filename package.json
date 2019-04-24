@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel src/index.html"
   },
   "devDependencies": {
     "@types/react": "^16.8.14",
