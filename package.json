@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html -d . --public-url https://teambition.github.io/task-detail-feature-demo/"
+    "build": "parcel build src/index.html -d . -o index.html --public-url https://teambition.github.io/task-detail-feature-demo/",
+    "postbuild": "parcel build src/index.html -d . -o 404.html --public-url https://teambition.github.io/task-detail-feature-demo/"
   },
   "devDependencies": {
     "@types/react": "^16.8.14",
