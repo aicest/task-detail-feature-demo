@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html -d . --public-url https://aicest.github.io/task-detail-feature-demo/"
+    "build": "parcel build src/index.html -d . --public-url https://teambition.github.io/task-detail-feature-demo/"
   },
   "devDependencies": {
     "@types/react": "^16.8.14",
