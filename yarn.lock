@@ -4862,10 +4862,10 @@ tar@^4:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
-tb-apps-sdk@^0.6.9:
-  version "0.6.9"
-  resolved "https://registry.yarnpkg.com/tb-apps-sdk/-/tb-apps-sdk-0.6.9.tgz#482e6f11f654f0288643ab0dfe7bdd50249ed4ab"
-  integrity sha512-j/pTHg+AfqlPEWCiEOeKGlu9Mpl+vE9TKmp4QzAfzWXA9Hcid8vsj6xaJ5BsaSBwDfyJLgxiAXjzPOyrbvznsw==
+tb-apps-sdk@0.6.10-alpha.0:
+  version "0.6.10-alpha.0"
+  resolved "https://registry.yarnpkg.com/tb-apps-sdk/-/tb-apps-sdk-0.6.10-alpha.0.tgz#152fe1ddb2a00663692e0ca291d7c683f4f7e8e2"
+  integrity sha512-fjXl4RRF47n7wgCGMbG9WQBvQnF8NVI1VbsfFQQO1lFRdFLtuT724h4trGBAw7Ldz7qdcDCRNJDub6TwpwPDew==
 
 terser@^3.16.1, terser@^3.7.3:
   version "3.17.0"

@@ -11,7 +11,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "sass": "^1.19.0",
-    "tb-apps-sdk": "^0.6.9",
+    "tb-apps-sdk": "0.6.10-alpha.0",
     "tslib": "^1.9.3",
     "typescript": "^3.4.4"
   }
