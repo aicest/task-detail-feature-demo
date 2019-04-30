@@ -34,12 +34,12 @@ const Root: React.FC = () => {
 
   return (
     <>
-      <header>Task Detail</header>
-      <div>
+      <header className='head'>
+        <h1>Task Detail Feature</h1>
+        <a onClick={handleClick}>x</a>
+      </header>
+      <div className='body'>
         <p>{location.href}</p>
-        <p>
-          [<a onClick={handleClick}>close</a>]
-        </p>
       </div>
     </>
   )
