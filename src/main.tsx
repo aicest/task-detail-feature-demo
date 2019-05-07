@@ -33,20 +33,41 @@ const Root: React.FC = () => {
   }, [])
 
   return (
-    <>
-      <header className='head'>
+    <main>
+      <header>
         <h1>Task Detail Feature</h1>
         <a onClick={handleClick}>x</a>
       </header>
-      <div className='body'>
-        <p>{location.href}</p>
+      <div className='container'>
+        <div className='body'>
+          <p>{location.href}</p>
+        </div>
       </div>
-    </>
+    </main>
+  )
+}
+
+const Mask: React.FC = (props) => {
+  const handleClick = useCallback((ev: React.SyntheticEvent) => {
+    if (ev.target === ev.currentTarget) {
+      webApp.close()
+    }
+  }, [])
+
+  return (
+    <div className='mask' onClick={handleClick}>
+      {props.children}
+    </div>
   )
 }
 
 const main = () => {
-  render(<Root />, document.querySelector('main'))
+  render(
+    <Mask>
+      <Root />
+    </Mask>,
+    document.getElementById('root')
+  )
 }
 
 main()
